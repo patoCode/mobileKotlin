@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "530128572627",
+    "project_id": "uber-udemy-c0313",
+    "storage_bucket": "uber-udemy-c0313.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530128572627:android:e0660c623d69948fd2c426",
+        "android_client_info": {
+          "package_name": "com.f5.udemyuber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530128572627-tbdf18uhctumm5oj1sa780m1eik3gqsu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwJxnGroWDdHyYbY0tDyUP_A_6k2BJkjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "530128572627-tbdf18uhctumm5oj1sa780m1eik3gqsu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
