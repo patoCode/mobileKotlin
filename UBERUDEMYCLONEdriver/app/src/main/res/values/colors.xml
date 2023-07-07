@@ -7,5 +7,6 @@
     <color name="secondaryColor">#758184</color>
     <color name="thriColor">#CEB496</color>
     <color name="fourthColor">#F4CDAC</color>
+    <color  name="done_color">#10B670</color>
 
 </resources>

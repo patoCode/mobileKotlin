@@ -7,5 +7,6 @@
     <color name="secondaryColor">#758184</color>
     <color name="thriColor">#CEB496</color>
     <color name="fourthColor">#F4CDAC</color>
+    <color name="request_trip">#D1E72B</color>
 
 </resources>
