@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="app_color_one">#0f0c29</color>
+    <color name="app_color_two">#302b63</color>
+    <color name="app_color_three">#24243e</color>
+
+    <color name="app_color_four">#8EC25E</color>
+    <color name="app_color_five">#00A4FF</color>
+    <color name="app_color_six">#FB6C45</color>
+
+    <color name="primary">#333366</color>
+    <color name="secondary">#5c5493</color>
+    <color name="subtext">#dddbdb</color>
+
+</resources>
