@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WeatherAppAndroidStudioAppTutorialAndroidMaterialDesign" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/black_1</item>
+
+    </style>
+
+    <style name="Theme.WeatherAppAndroidStudioAppTutorialAndroidMaterialDesign" parent="Base.Theme.WeatherAppAndroidStudioAppTutorialAndroidMaterialDesign" />
+</resources>
