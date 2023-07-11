@@ -1,8 +1,10 @@
 package com.f5.planto.assets.recycler
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.f5.planto.activities.PlanetActivity
 import com.f5.planto.R
 import com.f5.planto.databinding.ViewBinding
 
@@ -17,11 +19,14 @@ class Adapter(private val planetList: List<Planet>): RecyclerView.Adapter<MyView
     override fun getItemCount() =  planetList.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
         var dummyImg: Int? = null
-        holder.binding.tvName.text = planetList[position].title
-        holder.binding.tvGalaxy.text = planetList[position].galaxy
-        holder.binding.tvDistance.text = planetList[position].distance + " m Km"
-        holder.binding.tvGravity.text = planetList[position].gravity + " m/ss"
+
+        var ui = holder.binding
+        ui.tvName.text = planetList[position].title
+        ui.tvGalaxy.text = planetList[position].galaxy
+        ui.tvDistance.text = planetList[position].distance + " m Km"
+        ui.tvGravity.text = planetList[position].gravity + " m/ss"
 
         when(planetList[position].title!!.toString().toLowerCase()){
             "mars" -> dummyImg = R.drawable.mars
@@ -36,7 +41,14 @@ class Adapter(private val planetList: List<Planet>): RecyclerView.Adapter<MyView
             "mercury" -> dummyImg = R.drawable.mercury
             else ->  dummyImg = R.drawable.earth
         }
-        holder.binding.ivImage.setImageResource(dummyImg!!)
+        ui.ivImage.setImageResource(dummyImg!!)
+
+        holder.itemView.setOnClickListener { view ->
+            val i = Intent(holder.itemView.context, PlanetActivity::class.java)
+            i.putExtra("planet",  planetList[position])
+            i.putExtra("image", dummyImg)
+            holder.itemView.context.startActivity(i)
+        }
     }
 
 }

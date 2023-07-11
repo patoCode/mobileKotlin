@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primary"
     android:orientation="vertical"
-    tools:context=".PlanetActivity"
+    tools:context=".activities.PlanetActivity"
     >
     <ImageView
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:orientation="vertical"
         >
         <ImageView
-            android:id="@+id/ivInfo"
+            android:id="@+id/ivImagePlanet"
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
@@ -56,8 +56,127 @@
                     android:textSize="23sp"
                     android:textStyle="bold"
                     />
-
+                <TextView
+                    android:id="@+id/tvGalaxy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Prueba Galaxy"
+                    android:textSize="14sp"
+                    android:textColor="@color/subtext"
+                    android:layout_marginTop="-5dp"
+                    />
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="5dp"
+                    android:background = "@color/app_color_five"
+                    android:orientation = "vertical"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="15dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_distance"
+                        />
+                    <TextView
+                        android:id="@+id/tvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="54.6Km"
+                        android:textSize="14sp"
+                        android:textColor="@color/subtext"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_gravity"
+                        />
+                    <TextView
+                        android:id="@+id/tvGravity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14sp"
+                        android:text="3.711 m/ss"
+                        android:textColor="@color/subtext"
+                        />
+                </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="10dp"
+            android:padding="14dp"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Overview"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:letterSpacing="0.1"
+                    />
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background = "@color/app_color_five"
+                    android:orientation = "vertical"
+                    />
+                <TextView
+                    android:id="@+id/tvOverviewInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:letterSpacing=".1"
+                    android:lineSpacingExtra="1dp"
+                    android:textColor="@color/subtext"
+                    android:textSize="13sp"
+                    tools:text="Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo Contenido aquí, contenido aquí Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de Lorem Ipsum va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo). "
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvInfoFooter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_footer"
+            android:elevation="10dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Book your ride"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
     </LinearLayout>
 </LinearLayout>
