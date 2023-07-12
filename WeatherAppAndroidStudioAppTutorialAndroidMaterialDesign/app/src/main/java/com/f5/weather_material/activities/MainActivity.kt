@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         weatherTask().execute()
 
-        initRecycler()
     }
 
 
@@ -51,13 +50,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onPostExecute(result: String?) {
-            utils.jsonToListForWeek(result!!)
+            binding.rvWeek.adapter = HourlyAdapter(utils.jsonToListForWeek(result!!))
+            binding.rvWeek.layoutManager = LinearLayoutManager(this@MainActivity, RecyclerView.HORIZONTAL, false)
         }
 
-    }
-
-    fun initRecycler(){
-        binding.rvWeek.adapter = HourlyAdapter(setData.setHourly())
-        binding.rvWeek.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
     }
 }
