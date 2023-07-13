@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DOGLIST" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="searchViewStyle">@style/SearchViewStyle</item>
+    </style>
+
+    <style name="Theme.DOGLIST" parent="Base.Theme.DOGLIST" />
+
+    <style name="SearchViewStyle">
+        <item name="searchIcon">@drawable/app_icon_search</item>
+        <item name="closeIcon">@drawable/app_icon_close</item>
+        <item name="searchHintIcon">@drawable/app_icon_search</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textColorSearchUrl">@color/black</item>
+    </style>
+</resources>
