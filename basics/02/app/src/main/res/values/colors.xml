@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#C2E970</color>
+    <color name="colorPrimaryVariant">#6E9D0C</color>
+    <color name="colorOnPrimary">#DEE8C7</color>
+
+    <color name="colorSecondary">#089957</color>
+    <color name="colorSecondaryVariant">#018732</color>
+    <color name="colorOnSecondary">#0F271C</color>
+
+    <color name="app_color_tertiary">#5655C0</color>
+    <color name="app_color_quaternary">#382A95</color>
+
+</resources>

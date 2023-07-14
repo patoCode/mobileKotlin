@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style
+        name="Base.Theme.FullLoginSharedPreferences"
+        parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+    <style
+        name="Theme.FullLoginSharedPreferences"
+        parent="Base.Theme.FullLoginSharedPreferences">
+    </style>
+</resources>

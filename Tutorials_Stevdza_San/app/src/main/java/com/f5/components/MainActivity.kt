@@ -3,6 +3,7 @@ package com.f5.components
 import android.app.Activity
 import android.app.ProgressDialog.show
 import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,10 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         val remember = _ui.chRemember
         remember.setOnCheckedChangeListener{ _, isCheck ->
-            if(isCheck)
-                Toast(this).showCustomToast("CHECK!!", this)
-            else
-                Toast(this).showCustomToast("NO CHECK!!", this)
+//            if(isCheck)
+//                var preferences = getSharedPreferences()
+//            else
         }
 
         _ui.btnToast.setOnClickListener {
