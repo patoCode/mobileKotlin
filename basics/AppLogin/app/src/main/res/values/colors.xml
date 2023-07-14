@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="color_app_primaryContainer">#2D30A9</color>
+    <color name="color_app_onPrimaryContainer">#69FDFA</color>
+    <color name="color_app_primary">#1B1D7E</color>
+    <color name="color_app_onPrimary">#282B92</color>
+
+    <color name="color_app_secondaryContainer">#22243C</color>
+    <color name="color_app_onSecondaryContainer">#398FDB</color>
+
+    <color name="color_app_gradientA">#3BD9E1</color>
+    <color name="color_app_gradientB">#3796DF</color>
+
+    <color name="color_app_gradientC">#22248F</color>
+    <color name="color_app_gradientD">#2D30A9</color>
+
+
+
+</resources>
