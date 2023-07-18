@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+    </style>
+
+    <style name="Theme.Templates_login" parent="Base.Theme.Templates_login" />
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MaterialComponents.DayNight.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_app_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/color_app_secondary</item>
+        <item name="colorOnSecondary">@color/color_app_onSecondary</item>
+    </style>
+
+</resources>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".mui3.forms.CheckboxActivity"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="CHECKBOXES BASICS"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:background="@color/color_app_colorPrimary"
+            />
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Seleccionado"
+                />
+            <CheckBox
+                android:id="@+id/check02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Label02 - No style"
+                />
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Label 03"
+                style="@style/Widget.App.CheckBox"
+                />
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Label 04"
+                style="@style/Widget.App.CheckBox"
+                />
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Desactivado"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="CHIPS"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:background="@color/color_app_colorPrimary"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            >
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 01"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip 02"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="CHIPS GROUPS"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:background="#FFEFEC"
+            />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="30dp"
+            >
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip A"
+                android:checkable="true"
+                style="@style/Widget.App.Chip"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip B"
+                android:checkable="true"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip C"
+                android:checkable="true"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip D"
+                android:checkable="true"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chip E"
+                />
+        </com.google.android.material.chip.ChipGroup>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+
+    <!-- ORANGE LOGIN -->
+    <color name="color_app_black">#181311</color>
+    <color name="color_app_white">#f8f8f8</color>
+
+
+
+    <color name="color_app_primary">#F2582A</color>
+    <color name="color_app_onPrimary">#F3592B</color>
+    <color name="color_app_secondary">#F0842D</color>
+    <color name="color_app_onSecondary">#F3862E</color>
+
+    <color name="color_app_variant">#a9a9a9</color>
+
+</resources>
