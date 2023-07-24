@@ -12,6 +12,17 @@
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
         <item name="chipStyle">@style/Widget.App.Chip</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.App.Subtitle1</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.App.Subtitle1</item>
+        <item name="popupMenuBackground">@drawable/custom_popup_background</item>
+        <item name="popupMenuStyle">@style/Widget.App.PopupMenu</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="navigationViewStyle">@style/Widget.App.NavigationView</item>
+    </style>
+    <style name="Widget.App.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemIconTint">@color/navigation_item_color</item>
+        <item name="itemTextColor">@color/navigation_item_color</item>
+        <item name="itemShapeFillColor">@color/navigation_item_background_color</item>
     </style>
     <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="colorPrimary">@color/color_app_colorPrimary</item>
@@ -114,4 +125,11 @@
         <item name="android:minHeight">48dp</item>
     </style>
 
+    <!-- MENUS -->
+
+    <style name="TextAppearance.App.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/color_app_colorOnPrimary</item>
+    </style>
+    <style name="Widget.App.PopupMenu" parent="Widget.MaterialComponents.PopupMenu">
+    </style>
 </resources>

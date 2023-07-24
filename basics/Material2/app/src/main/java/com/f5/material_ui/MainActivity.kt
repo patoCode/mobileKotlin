@@ -9,6 +9,7 @@ import com.f5.material_ui.mui3.containers.MenuContainerActivity
 import com.f5.material_ui.mui3.forms.MenuFormActivity
 import com.f5.material_ui.mui3.navigators.BottomNavActivity
 import com.f5.material_ui.mui3.navigators.MenuNavigatorActivity
+import com.f5.material_ui.mui3.widgets.MenuWidgetActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
 
         _ui.btn03.setOnClickListener {
             val i = Intent(this, MenuContainerActivity::class.java)
+            startActivity(i)
+        }
+
+        _ui.btn04.setOnClickListener {
+            val i = Intent(this, MenuWidgetActivity::class.java)
             startActivity(i)
         }
 

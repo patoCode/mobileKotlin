@@ -38,5 +38,11 @@
         android:layout_height="wrap_content"
         android:text="DIALOGS"
         />
+    <Button
+        android:id="@+id/btn04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WIDGETS"
+        />
 
 </LinearLayout>

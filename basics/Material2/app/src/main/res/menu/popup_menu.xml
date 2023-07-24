@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/optionA"
+        android:title="Popup_A"
+        android:icon="@drawable/icon_app_search"
+        />
+    <item
+        android:id="@+id/optionB"
+        android:title="Option_B"
+        android:icon="@drawable/icon_app_btn"
+        />
+    <item
+        android:id="@+id/optionC"
+        android:title="Option_C"
+        android:icon="@drawable/icon_app_fav"
+        />
+</menu>

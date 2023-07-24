@@ -9,6 +9,7 @@ object setData {
         list.add(MuiComponent(R.drawable.app_bar_top,"APP BARS - TOP", "Description del componente este ", "com.f5.material_ui.mui3.navigators.AppbarActivity" ))
         list.add(MuiComponent(R.drawable.app_bar_bottom,"APP BARS - BOTTOM", "Description del componente este ", "com.f5.material_ui.mui3.navigators.BottomAppbarActivity"))
         list.add(MuiComponent(R.drawable.bottom_navigation,"BOTTOM NAVIGATOR", "Description del componente este ", "com.f5.material_ui.mui3.navigators.BottomNavActivity"))
+        list.add(MuiComponent(R.drawable.drawer,"DRAWER NAVIGATOR", "Description del componente este ", "com.f5.material_ui.mui3.navigators.DrawerActivity"))
         return list
     }
 
@@ -19,6 +20,12 @@ object setData {
         list.add(MuiComponent(R.drawable.calendar, "DatePicker", "Description ", "com.f5.material_ui.mui3.forms.DatepickerActivity"))
         list.add(MuiComponent(R.drawable.dropdown, "DROPDOWN / LISTS / MENUS", "Description ", "com.f5.material_ui.mui3.forms.DropdownActivity"))
 
+        return list
+    }
+
+    fun fillWidgets():List<MuiComponent>{
+        var list = mutableListOf<MuiComponent>()
+        list.add(MuiComponent(R.drawable.progress, "Progress bar", "Description ", "com.f5.material_ui.mui3.widgets.ProgressbarActivity"))
         return list
     }
 
