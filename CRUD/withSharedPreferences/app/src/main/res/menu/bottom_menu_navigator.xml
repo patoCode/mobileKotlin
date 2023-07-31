@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/optCrear"
+        android:title="Crear"
+        android:icon="@drawable/icon_create"
+        />
+    <item
+        android:id="@+id/optRead"
+        android:title="Read"
+        android:icon="@drawable/icon_read"
+        />
+    <item
+        android:id="@+id/optUpdate"
+        android:title="Update"
+        android:icon="@drawable/icon_update"
+        />
+    <item
+        android:id="@+id/optDelete"
+        android:title="Delete"
+        android:icon="@drawable/icon_delete"
+        />
+</menu>

@@ -1,0 +1,7 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Fragments02" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/color_primaryDark</item>
+        <item name="colorSecondary">@color/color_secondaryDark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+</resources>

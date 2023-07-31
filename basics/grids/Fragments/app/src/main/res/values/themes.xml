@@ -1,0 +1,9 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/app_color_primary</item>
+        <item name="colorSecondary">@color/app_color_secondary</item>
+        <item name="colorAccent">@color/app_color_accent</item>
+    </style>
+</resources>
