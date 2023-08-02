@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="colorPrimaryInverse">@color/color_primaryDark</item>
+        <item name="colorPrimaryVariant">@color/color_primaryDark</item>
+        <item name="colorPrimary">@color/color_primaryDark</item>
+        <item name="colorPrimaryDark">@color/color_primaryDark</item>
+        <item name="android:statusBarColor">@color/color_primaryDark</item>
+        <item name="colorSecondary">@color/color_secondaryDark</item>
+        <item name="colorAccent">@color/color_accentDark</item>
+        <item name="colorSurface">@color/color_surfaceDark</item>
+    </style>
+</resources>

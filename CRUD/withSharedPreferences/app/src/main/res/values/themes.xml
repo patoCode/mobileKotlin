@@ -3,5 +3,13 @@
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorSecondary">@color/color_secondary</item>
         <item name="colorAccent">@color/color_accent</item>
+        <item name="android:statusBarColor">@color/color_primaryDark</item>
+    </style>
+    <style name="HeaderSection" parent="AppTheme">
+        <item name="android:textSize">26dp</item>
+        <item name="android:fontFamily">@font/montserrat_black</item>
+        <item name="android:textColor">@color/color_primaryDark</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center_horizontal</item>
     </style>
 </resources>

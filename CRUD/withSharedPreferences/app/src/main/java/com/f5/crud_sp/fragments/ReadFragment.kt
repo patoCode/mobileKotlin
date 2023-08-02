@@ -9,18 +9,15 @@ import com.f5.crud_sp.R
 
 
 class ReadFragment : Fragment() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_read, container, false)
     }
-
     companion object {
         @JvmStatic
         fun newInstance() = ReadFragment()

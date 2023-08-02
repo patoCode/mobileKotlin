@@ -1,20 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context=".fragments.CreateFragment"
-    >
+    android:orientation="vertical"
+    tools:context=".fragments.CreateFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="[C] - Create"
-        android:fontFamily="sans-serif"
-        android:textSize="22sp"
-        android:textStyle="bold"
+        android:text="Create"
+        style="@style/HeaderSection"
         />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/llContainerForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/gray"
+            app:startIconDrawable="@drawable/icon_person"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/design_default_color_error"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieName"
+                android:hint="Nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="16"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/gray"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/icon_card"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            app:helperTextTextColor="@color/design_default_color_error"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieUsername"
+                android:hint="Carnet de Identidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="30"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="16"
+            app:endIconMode="password_toggle"
+            app:hintTextColor="@color/gray"
+            app:startIconDrawable="@drawable/icon_key"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/design_default_color_error"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Password"
+                android:id="@+id/tiePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:lines="1"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cumpleaños"
+            app:hintTextColor="@color/gray"
+            app:startIconDrawable="@drawable/icon_cake"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/design_default_color_error"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieCumpleano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:elevation="2dp"
+            android:text="Guardar"
+            style="@style/Widget.MaterialComponents.Button"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

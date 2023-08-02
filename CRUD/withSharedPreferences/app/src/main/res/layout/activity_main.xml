@@ -17,14 +17,19 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnvNavigator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="bottom"
-        android:background="@color/white"
+        android:elevation="0dp"
+        android:padding="0sp"
+        android:background="@drawable/botton_nav_bg"
         app:menu="@menu/bottom_menu_navigator"
         app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="24dp"
         app:itemTextColor="@color/bottom_menu"
         app:itemIconTint="@color/bottom_menu"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
         />
 
 
