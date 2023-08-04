@@ -6,29 +6,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_surface"
     android:orientation="vertical"
+    style="@style/MainBg"
     tools:context=".MainActivity"
     >
-
     <LinearLayout
         android:id="@+id/llScreenResult"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:orientation="vertical"
         android:gravity="bottom"
-        android:background="@color/color_primary"
+        style="@style/ScreenBg"
         >
-
         <TextView
             android:id="@+id/preview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_regular"
-            android:textColor="@color/white"
             android:textAlignment="textEnd"
             android:textSize="26sp"
             android:paddingHorizontal="10dp"
+            style="@style/ColorKey"
             tools:text="123456789"
             />
 
@@ -36,13 +33,12 @@
             android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/kanit_regular"
-            android:textColor="@color/white"
             android:textAlignment="textEnd"
             android:textSize="44sp"
             android:paddingHorizontal="10dp"
             android:maxLines="1"
             android:singleLine="true"
+            style="@style/ColorKey"
             tools:text="123456789"
             />
     </LinearLayout>
@@ -64,12 +60,12 @@
             >
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/erase"
-                style="@style/OperatorKey"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:icon="@drawable/erase_reverse"
                 app:iconTint="@color/color_surface"
                 app:iconGravity="textEnd"
+                style="@style/EraseKey"
                 />
             <Button
                 android:id="@+id/signCe"
@@ -229,9 +225,8 @@
                 android:layout_height="wrap_content"
                 android:text="="
                 android:layout_weight="2"
-                android:backgroundTint="@color/color_primary"
                 android:textColor="@color/white"
-                style="@style/OperatorKey"
+                style="@style/EqualsKey"
                 />
         </LinearLayout>
 

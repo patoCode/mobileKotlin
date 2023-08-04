@@ -1,43 +1,29 @@
 package com.f5.calqlator
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.f5.calqlator.databinding.ActivityMainBinding
+import com.f5.calqlator.infraestructure.Calculator
+import kotlin.math.sign
 
 class MainActivity : AppCompatActivity() {
     private var TAG = "-CALCULATOR-"
-    private var pending = false
 
     private lateinit var ui: ActivityMainBinding
-    private lateinit var resultTextView: TextView
-    private lateinit var previewTextView: TextView
+    private lateinit var displayPreview: TextView
+    private lateinit var displayHistoric: TextView
 
-    private var firstNumber: Float = 0f
-    private var secondNumber: Float = 0f
-
+    private var calculator: Calculator = Calculator()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ui = ActivityMainBinding.inflate(layoutInflater)
         setContentView(ui.root)
-        resultTextView = ui.result
-        previewTextView = ui.preview
 
-        ui.signDot.setOnClickListener(listenerDot(ui.signDot.text.toString()))
-        ui.signCe.setOnClickListener(listenerClearAll())
-
-        ui.signPlus.setOnClickListener(listenerSign(ui.signPlus.text.toString()))
-        ui.signMinus.setOnClickListener(listenerSign(ui.signMinus.text.toString()))
-        ui.signMultiply.setOnClickListener(listenerSign(ui.signMultiply.text.toString()))
-        ui.signDivide.setOnClickListener(listenerSign(ui.signDivide.text.toString()))
-
-        ui.signEquals.setOnClickListener(listenerSign(ui.signEquals.text.toString()))
-        ui.erase.setOnClickListener(listenerErase())
-
+        // NUMEROS
         ui.one.setOnClickListener(listenerNumeric(ui.one.text.toString()))
         ui.two.setOnClickListener(listenerNumeric(ui.two.text.toString()))
         ui.three.setOnClickListener(listenerNumeric(ui.three.text.toString()))
@@ -47,64 +33,76 @@ class MainActivity : AppCompatActivity() {
         ui.seven.setOnClickListener(listenerNumeric(ui.seven.text.toString()))
         ui.eight.setOnClickListener(listenerNumeric(ui.eight.text.toString()))
         ui.nine.setOnClickListener(listenerNumeric(ui.nine.text.toString()))
+        ui.zero.setOnClickListener(listenerNumeric(ui.zero.text.toString()))
+
+        // AUXILIARES
+        // ui.signDot.setOnClickListener(listenerDot(ui.signDot.text.toString()))
+        // ui.signPercent.setOnClickListener(listenerPercent())
+        ui.signCe.setOnClickListener(listenerClearAll())
+
+        // OPERACIONES
+        ui.signPlus.setOnClickListener(listenerSign(ui.signPlus.text.toString()))
+        ui.signMinus.setOnClickListener(listenerSign(ui.signMinus.text.toString()))
+        ui.signMultiply.setOnClickListener(listenerSign(ui.signMultiply.text.toString()))
+        ui.signDivide.setOnClickListener(listenerSign(ui.signDivide.text.toString()))
+
+        // ACTIONS
+        ui.signEquals.setOnClickListener(listenerEquals())
+        ui.erase.setOnClickListener(listenerErase())
+
+        // DISPLAY
+        displayPreview = ui.result
+        displayHistoric = ui.preview
     }
 
     inner class listenerNumeric(var value: String): View.OnClickListener{
         override fun onClick(view: View?) {
-            if(resultTextView.text.toString().equals("0"))
-                resultTextView.text = value
-            else
-                resultTextView.text = resultTextView.text.toString().plus(value)
+            calculator.writeNumberOnPreview(value)
+            displayPreview.text = calculator.getPreview()
         }
     }
-
 
     inner class listenerSign(var sign: String): View.OnClickListener{
+        var result: Float = 0f
         override fun onClick(view: View?) {
-            if (firstNumber == 0f){
-                firstNumber = resultTextView.text.toString().toFloat()
-            } else {
-                if(secondNumber == 0f) {
-                    secondNumber = resultTextView.text.toString().toFloat()
-                }
-            }
+            calculator.writeOperator(sign)
+            displayPreview.text = calculator.getPreview()
+            displayHistoric.text = calculator.getHistoric()
         }
-
-
-
     }
 
+    inner class listenerEquals(): View.OnClickListener{
+        override fun onClick(view: View?) {
+            var _result = calculator.operateEquals()
+            displayHistoric.text = ""
+            displayPreview.text = calculator.getPreview()
+        }
+    }
 
     inner class listenerDot(var value: String): View.OnClickListener{
         override fun onClick(view: View?) {
-            resultTextView.text = resultTextView.text.toString().plus(value)
+            calculator.writeNumberOnPreview(".")
         }
     }
-
 
     inner class listenerErase(): View.OnClickListener{
         override fun onClick(view: View?) {
-            if(resultTextView.text.toString().length <= 1)
-                resultTextView.text = "0"
-            else
-                resultTextView.text = resultTextView.text.toString().dropLast(1)
+            calculator.erase()
+            displayPreview.text = calculator.getPreview()
         }
     }
-
 
     inner class listenerClearAll():View.OnClickListener{
         override fun onClick(view: View?) {
-            firstNumber = 0f
-            secondNumber = 0f
-            resultTextView.text = "0"
-            previewTextView.text = ""
+            calculator.reset()
+            resetScreen()
         }
     }
 
-//    inner class listenerEqual(): View.OnClickListener{
-//        override fun onClick(view: View?) {
-//            previewTextView.text = resultTextView.text.toString().plus(value)
-//            resultTextView.text = ""
-//        }
-//    }
+    fun resetScreen(){
+        calculator.reset()
+        displayHistoric.text = calculator.getHistoric()
+        displayPreview.text = calculator.getPreview()
+    }
+
 }
