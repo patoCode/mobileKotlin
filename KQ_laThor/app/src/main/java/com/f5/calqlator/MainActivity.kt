@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 import com.f5.calqlator.databinding.ActivityMainBinding
 import com.f5.calqlator.infraestructure.Calculator
+import com.f5.calqlator.shared_preferences.SharedProvider
 import kotlin.math.sign
 
 class MainActivity : AppCompatActivity() {
@@ -17,11 +19,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var displayHistoric: TextView
 
     private var calculator: Calculator = Calculator()
+    private var pref:SharedProvider? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ui = ActivityMainBinding.inflate(layoutInflater)
+        pref = SharedProvider(this@MainActivity)
         setContentView(ui.root)
+        verifyTheme()
 
         // NUMEROS
         ui.one.setOnClickListener(listenerNumeric(ui.one.text.toString()))
@@ -53,6 +58,36 @@ class MainActivity : AppCompatActivity() {
         // DISPLAY
         displayPreview = ui.result
         displayHistoric = ui.preview
+
+        // THEME SWITCH
+        ui.swTheme.setOnCheckedChangeListener { compoundButton, b ->
+            var value = 0
+            if(ui.swTheme.isChecked){
+                value = 1
+            }
+            pref!!.saveTheme(value)
+            verifyTheme()
+            Log.d(TAG, "CHECK ${value}")
+        }
+    }
+
+    private fun verifyTheme(){
+        var themeValue = pref!!.themeIsSave()
+        if(themeValue > 0){
+            ui.swTheme.isChecked = true
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            Log.d(TAG, "CHECK TRUE")
+        } else {
+            ui.swTheme.isChecked = false
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            Log.d(TAG, "CHECK FALSE")
+        }
+    }
+
+    private fun hiddenBars(){
+        val uiOptions = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+        window.decorView.setSystemUiVisibility(uiOptions)
     }
 
     inner class listenerNumeric(var value: String): View.OnClickListener{

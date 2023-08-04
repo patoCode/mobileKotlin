@@ -11,6 +11,22 @@
     tools:context=".MainActivity"
     >
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center|end"
+        android:paddingEnd="10dp"
+        style="@style/ScreenBg"
+        >
+        <Switch
+            android:id="@+id/swTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/options"
+            android:track="@drawable/track_guide"
+            />
+    </LinearLayout>
+    <LinearLayout
         android:id="@+id/llScreenResult"
         android:layout_width="match_parent"
         android:layout_height="280dp"
